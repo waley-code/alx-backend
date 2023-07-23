@@ -3,7 +3,7 @@
 
 import csv
 import math
-from typing import List
+from typing import Dict, List
 
 
 def index_range(page: int, page_size: int) -> tuple:
@@ -80,7 +80,7 @@ class Server:
 
         dataset: List = self.dataset()
         totalpag: int = len(dataset) if dataset else 0
-        totalpag = ceil(totalpag / page_size)
+        totalpag = math.ceil(totalpag / page_size)
         prevpag: int = (page - 1) if (page - 1) >= 1 else None
         nextpag: int = (page + 1) if (page + 1) <= totalpag else None
 
