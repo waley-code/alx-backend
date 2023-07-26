@@ -9,7 +9,7 @@ class LIFOCache (BaseCaching):
     """Basic caching class
     """
     def __init__(self):
-        """ 
+        """
         An implementation of LIFO(Last In Fisrt Out) Cache
 
         Attributes:
@@ -44,7 +44,7 @@ class LIFOCache (BaseCaching):
             if keyIn not in self.__keys:
                 keysLength = len(self.__keys)
                 if len(self.cache_data) == BaseCaching.MAX_ITEMS:
-                    keyOut = self.__keys.pop(keysLength -1)
+                    keyOut = self.__keys.pop(keysLength - 1)
                     self.cache_data.pop(keyOut)
                 self.__keys.insert(keysLength, keyIn)
         return keyOut
