@@ -9,7 +9,7 @@ class FIFOCache (BaseCaching):
     """Basic caching class
     """
     def __init__(self):
-        """ 
+        """
                 An implementation of FIFO(First In Fisrt Out) Cache
 
         Attributes:
